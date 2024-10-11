@@ -32,7 +32,7 @@
 6.
 
    ```sql
-   SELECT * FROM ugyfel WHERE orsz LIKE "H";
+   SELECT *, YEAR(NOW()) - szulev AS "Életkor" FROM ugyfel WHERE orsz LIKE "H" ORDER BY szulev DESC;
    ```
    
 7.
