@@ -30,5 +30,5 @@ SELECT eloado, COUNT(*) AS eloadasszam FROM eloadasok GROUP BY eloado HAVING COU
 
 **8.** Ki és hány előadást tartott?
 ```sql
-SELECT eloado, COUNT(*) AS eloadasok_szama FROM eloadasok GROUP BY eloado;
+SELECT eloado, COUNT(*) AS eloadasok_szama FROM eloadasok GROUP BY eloado HAVING COUNT(azon) > 1;
 ```
