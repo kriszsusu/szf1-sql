@@ -23,7 +23,7 @@ Az `eloadasok.sql` állományban az előadó tudósok és az elhangzott előadá
 
 ---
 
-Az alábbi feladatok SQL utasátását mentse a `neve.txt` állományba! Minden kód elé írja fel a feladat sorszámát!
+#### Az alábbi feladatok SQL utasátását mentse a `neve.txt` állományba! Minden kód elé írja fel a feladat sorszámát!
 
 **1.** Készítsen adatbázist konferencia néven. Az adatbázis alapértelmezett kódolása és rendezése UTF-8, magyar legyen! Importálja az `eloadasok.sql` állományt az adatbázisba!
 
