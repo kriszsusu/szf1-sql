@@ -17,4 +17,4 @@ SELECT eloadasok.tema, eloadasok.eloado, SUM(eloadasok.jegy) * eloadasok.resztve
 SELECT eloado, COUNT(*) AS eloadasszam FROM eloadasok GROUP BY eloado HAVING COUNT(*) > 1 ORDER BY eloado;
 
 -- 8. Ki és hány előadást tartott?
-SELECT eloado, COUNT(*) AS eloadasok_szama FROM eloadasok GROUP BY eloado;
+SELECT eloado, COUNT(*) AS eloadasok_szama FROM eloadasok GROUP BY eloado HAVING COUNT(azon) > 1;
