@@ -20,7 +20,7 @@ SELECT COUNT(*) AS eloadasszam FROM eloadasok WHERE tema LIKE "%energia%";
 
 **6.** Az orvostudományi előadásoknak mennyi volt a jegyekből származó bevétele? Jelenjen meg a listában az előadás címe, az előadó neve valamint a bevétel! A listát rendezze bevétel alapján csökkenő sorrendbe!
 ```sql
-SELECT tema, eloado, (jegy * resztvevok) AS bevetel FROM eloadasok WHERE tudomanyag LIKE 'orvostudományok' ORDER BY bevetel DESC;
+SELECT eloadasok.tema, eloadasok.eloado, SUM(eloadasok.jegy) * eloadasok.resztvevok AS bevetel FROM eloadasok WHERE tudomanyag LIKE 'orvostudományok' GROUP BY eloadasok.tema, eloadasok.eloado ORDER BY bevetel DESC;
 ```
 
 **7.** Jelenítse meg azoknak az előadóknak a nevét, akik egynél több előadást tartottak meg! A listát rendezze névsorba!
